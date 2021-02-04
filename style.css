@@ -1,0 +1,108 @@
+*{
+    font-family: "Josefin Sans";
+}
+body{
+    background-color: #323232;
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+}
+.thetitle{
+    text-align: center;
+}
+.main{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid black;
+}
+.elementdiv{
+    width: 30%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.element{
+    width: 130px;
+    height: 130px;
+}
+.showresult{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    height: 130px;
+}
+.comparediv{
+    width: 30%;
+    display: inline-flex
+}
+.comparediv2{
+    width: 30%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.comparison1{
+    width: 50%;
+    height: 130px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.comparison2{
+    width: 50%;
+    height: 130px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.desc{
+    width: 100%;
+    text-align: center;
+}
+.end{
+    width: 90px;
+    height: 90px;
+}
+.players{
+    color: white;
+}
+#urpoints{
+    color: blue;
+}
+#hispoints{
+    color: red;
+}
+#rock{
+    color: blue;
+}
+#paper{
+    color: purple;
+}
+#scissors{
+    color: red;
+}
+#play-btn{
+    color: #929292;
+}
+@media screen and (max-width: 700px){
+.end{
+    width: 70px;
+    height: 70px;
+}
+}
+@media screen and (max-width: 420px){
+.end{
+    width: 40px;
+    height: 40px;
+}
+.element{
+    width: 80px;
+    height: 80px;
+}
+}
