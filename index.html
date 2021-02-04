@@ -6,14 +6,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="thetitle">
-        <h1><span style="color:blue;">Gurë</span> 
-        <span style="color:purple;">Letër</span> 
-        <span style="color: red;">Gërshëre</span> </h1>
-        <h3 style="color: #929292;">Kliko dhe shiko se a fitove :)</h3>
+        <h1><span style="color:blue;">Rock</span> 
+        <span style="color:purple;">Paper</span> 
+        <span style="color: red;">Scissors</span> </h1>
+        <h3 style="color: #929292;">Click on the elements to play</h3>
     </div>
     <div class="main">
         <div class="elementdiv">
@@ -28,7 +27,7 @@
     </div>
     
     <div class="showresult">
-        <div class="comparediv2"><h1 style="color: white;">Ti: <span style="color: blue;" id="urpoints"></h1></span></div>
+        <div class="comparediv2"><h1 style="color: white;">You: <span style="color: blue;" id="urpoints"></h1></span></div>
         <div class="comparediv">
         <div id="urchoice" class="comparison1">
             <img class="end" src="" alt=""id="whe1">
@@ -43,123 +42,7 @@
         <h1 id="explain"></h1>
     </div>
 
-    <script>
-        var theElements = ["rock","paper","scissors"];
-var random = Math.floor(Math.random()*theElements.length);
-var randomElements = theElements[random];
-var mypoints=0;
-var pcpoints=0;
-console.log(randomElements)
-
-function theGame(object){
-    var image1 = document.getElementById("whe1")
-    var image2 = document.getElementById("whe2")
-//=======ROCK==========
-    //if you and pc chose rock
-    if(object == "rock" && randomElements =="rock"){
-        image1.src = "https://i.imgur.com/iBCtfP8.png";
-        image2.src = "https://i.imgur.com/iBCtfP8.png";
-        document.getElementById("explain").innerHTML = "PC ka zgjedhur gurë </br> Loja është barazim!"
-        document.getElementById("explain").style.color ="lightblue"
-        random = Math.floor(Math.random()*theElements.length);
-        randomElements = theElements[random];
-        console.log(randomElements)
-    }
-    //if you chose rock, but pc chose paper
-    else if(object == "rock" && randomElements =="paper"){
-        pcpoints++
-        image1.src = "https://i.imgur.com/iBCtfP8.png";
-        image2.src = "https://i.imgur.com/bHQrxtj.png";
-        document.getElementById("explain").innerHTML = "PC ka zgjedhur letër </br> Ti humbe!"
-        document.getElementById("explain").style.color ="crimson"
-        document.getElementById("hispoints").innerHTML = pcpoints
-        random = Math.floor(Math.random()*theElements.length);
-        randomElements = theElements[random];
-        console.log(randomElements)
-    }
-    //if you chose rock,but pc chose scissors
-    else if(object == "rock" && randomElements =="scissors"){
-        mypoints++
-        image1.src = "https://i.imgur.com/iBCtfP8.png";
-        image2.src = "https://i.imgur.com/luLLjnv.png";
-        document.getElementById("explain").innerHTML = "PC ka zgjedhur gërshërë </br> Ti fitove!"
-        document.getElementById("explain").style.color ="lightgreen"
-        document.getElementById("urpoints").innerHTML = mypoints
-        random = Math.floor(Math.random()*theElements.length);
-        randomElements = theElements[random];
-        console.log(randomElements)
-    }
-//=====PAPER===========
-//if you and pc chose paper
-if(object == "paper" && randomElements =="paper"){
-    image1.src = "https://i.imgur.com/bHQrxtj.png";
-    image2.src = "https://i.imgur.com/bHQrxtj.png";
-    document.getElementById("explain").innerHTML = "PC ka zgjedhur letër </br> Loja është barazim!"
-    document.getElementById("explain").style.color ="lightblue"
-    random = Math.floor(Math.random()*theElements.length);
-    randomElements = theElements[random];
-    console.log(randomElements)
-}
-//if you chose paper, but pc chose scissors
-else if(object == "paper" && randomElements =="scissors"){
-    pcpoints++
-    image1.src = "https://i.imgur.com/bHQrxtj.png";
-    image2.src = "https://i.imgur.com/luLLjnv.png";
-    document.getElementById("explain").innerHTML = "PC ka zgjedhur gërshërë </br> Ti humbe!"
-    document.getElementById("explain").style.color ="crimson"
-    document.getElementById("hispoints").innerHTML = pcpoints
-    random = Math.floor(Math.random()*theElements.length);
-    randomElements = theElements[random];
-    console.log(randomElements)
-}
-//if you chose paper,but pc chose rock
-else if(object == "paper" && randomElements =="rock"){
-    mypoints++
-    image1.src = "https://i.imgur.com/bHQrxtj.png";
-    image2.src = "https://i.imgur.com/iBCtfP8.png";
-    document.getElementById("explain").innerHTML = "PC ka zgjedhur gurë </br> Ti fitove!"
-    document.getElementById("explain").style.color ="lightgreen"
-    document.getElementById("urpoints").innerHTML = mypoints
-    random = Math.floor(Math.random()*theElements.length);
-    randomElements = theElements[random];
-    console.log(randomElements)
-}
-//============SCISSORS==============
-    //if you and pc chose scissors
-if(object == "scissors" && randomElements =="scissors"){
-    image1.src = "https://i.imgur.com/luLLjnv.png";
-    image2.src = "https://i.imgur.com/luLLjnv.png";
-    document.getElementById("explain").innerHTML = "PC ka zgjedhur gërshërë </br> Loja është barazim"
-    document.getElementById("explain").style.color ="lightblue"
-    random = Math.floor(Math.random()*theElements.length);
-    randomElements = theElements[random];
-    console.log(randomElements)
-}
-//if you chose scissors, but pc chose rock
-else if(object == "scissors" && randomElements =="rock"){
-    pcpoints++
-    image1.src = "https://i.imgur.com/luLLjnv.png";
-    image2.src = "https://i.imgur.com/iBCtfP8.png";
-    document.getElementById("explain").innerHTML = "PC ka zgjedhur gurë </br> Ti Humbe!"
-    document.getElementById("explain").style.color ="crimson"
-    document.getElementById("hispoints").innerHTML = pcpoints
-    random = Math.floor(Math.random()*theElements.length);
-    randomElements = theElements[random];
-    console.log(randomElements)
-}
-//if you chose scissors,but pc chose paper
-else if(object == "scissors" && randomElements =="paper"){
-    mypoints++
-    image1.src = "https://i.imgur.com/luLLjnv.png";
-    image2.src = "https://i.imgur.com/bHQrxtj.png";
-    document.getElementById("explain").innerHTML = "PC ka zgjedhur letër </br> Ti fitove!"
-    document.getElementById("explain").style.color ="lightgreen"
-    document.getElementById("urpoints").innerHTML = mypoints
-    random = Math.floor(Math.random()*theElements.length);
-    randomElements = theElements[random];
-    console.log(randomElements)
-}
-}
+    <script src="script.js">
     </script>
 </body>
 </html>
