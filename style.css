@@ -69,11 +69,8 @@ body{
     width: 90px;
     height: 90px;
 }
-img{
+img[src=""]{
     display:none;
-}
-img[src]{
-    display:block;
 }
 .players{
     color: white;
