@@ -105,7 +105,7 @@ else if(object == "scissors" && randomElements =="paper"){
     mypoints++
     image1.src = "https://i.imgur.com/luLLjnv.png";
     image2.src = "https://i.imgur.com/bHQrxtj.png";
-    document.getElementById("explain").innerHTML = "PC has chosen paper </br> Ti fitove!"
+    document.getElementById("explain").innerHTML = "PC has chosen paper </br> You won!"
     document.getElementById("explain").style.color ="lightgreen"
     document.getElementById("urpoints").innerHTML = mypoints
     random = Math.floor(Math.random()*theElements.length);
